@@ -1,12 +1,18 @@
 const mongoose = require("mongoose");
 
 const blogSchema = mongoose.Schema({
-    title: String,
+    title: {
+        type: String,
+        required: true
+    },
     image: {
         type: String,
         default: "https://picsum.photos/seed/picsum/400/225"
     },
-    body: String,
+    body: {
+        type: String,
+        required: true
+    },
     created: {
         type: Date,
         default: Date.now

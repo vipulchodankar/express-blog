@@ -24,6 +24,21 @@ app.get("/blogs", (req, res) => {
     })
 })
 
+app.get("/blogs/new", (req, res) => {
+    res.render("new");
+})
+
+app.post("/blogs", (req, res) => {
+    Blog.create(req.body.blog, (err, blog) => {
+        if (err) {
+            console.log("ERROR!", err);
+            res.render("/new");
+        } else {
+            res.redirect("/blogs");
+        }
+    })
+})
+
 const PORT = process.env.PORT || 6969;
 
 app.listen(PORT, () => {

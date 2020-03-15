@@ -2,3 +2,23 @@ body{
     background: #303030;
     color: #fff;
 }
+
+i.icon {
+    font-size: 1.5rem;
+}
+
+.container.main {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #212121;
+    color: #fff;
+}
+
+.ui.huge.header{
+    color: #fff;
+}
+
+.blog-post {
+    padding: 10px;
+    padding-bottom: 20px;
+}

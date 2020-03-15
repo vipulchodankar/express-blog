@@ -1,13 +1,13 @@
 <%- include('./partials/header')%>
 
-<h1>Index Page</h1>
-
-<% blogs.forEach((blog) => { %>
-<div>
-  <h2><%=blog.title%></h2>
-  <div> <%=blog.created%> </div>
-  <img src="<%=blog.image%>" alt="<%=blog.title%>" />
+<div class="ui main container segment">
+  <% blogs.forEach((blog) => { %>
+  <div class="blog-post">
+    <h2><%=blog.title%></h2>
+    <div><%=blog.created%></div>
+    <img src="<%=blog.image%>" alt="<%=blog.title%>" class="ui rounded image"/>
+  </div>
+  <% }) %>
 </div>
-<% }) %>
 
 <%- include('./partials/footer')%>
