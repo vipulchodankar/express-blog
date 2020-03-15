@@ -1,0 +1,29 @@
+{
+  "name": "express-blog",
+  "version": "1.0.0",
+  "description": "A blog made with Express to improve my DB and backend skills.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vipulchodankar/express-blog.git"
+  },
+  "keywords": [],
+  "author": "Vipul Chodankar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vipulchodankar/express-blog/issues"
+  },
+  "homepage": "https://github.com/vipulchodankar/express-blog#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
