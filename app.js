@@ -39,6 +39,18 @@ app.post("/blogs", (req, res) => {
     })
 })
 
+app.get("/blogs/:id", (req, res) => {
+    Blog.findById(req.params.id, (err, blog) => {
+        if (err) {
+            console.log("ERROR!", err);
+            res.redirect("/blogs");
+        } else {
+            res.render("show", { blog: blog });
+        }
+    })
+
+})
+
 const PORT = process.env.PORT || 6969;
 
 app.listen(PORT, () => {

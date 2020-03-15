@@ -4,8 +4,10 @@
   <% blogs.forEach((blog) => { %>
   <div class="blog-post">
     <h2><%=blog.title%></h2>
-    <div><%=blog.created%></div>
+    <div><%=blog.created.toDateString()%></div>
     <img src="<%=blog.image%>" alt="<%=blog.title%>" class="ui rounded image"/>
+    <p><%=blog.body.substring(0, 75)%>...</p>
+    <a href="/blogs/<%=blog._id%>">Read more</a>
   </div>
   <% }) %>
 </div>
